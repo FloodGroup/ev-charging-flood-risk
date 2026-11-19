@@ -17,10 +17,12 @@ This figure examines event-magnitude sensitivity and the country-level distribut
 
 For event $T$, $d_{i,T}$ is the sampled depth at charger $i$, and $s_i$ is its local protection standard in years. Each event uses its own depth column.
 
-$$
-N_{\mathrm{nominal},T}=\sum_i \mathbf{1}[d_{i,T}>0],\qquad
-N_{\mathrm{effective},T}=\sum_i \mathbf{1}[d_{i,T}>0]\,\mathbf{1}[s_i<T].
-$$
+```math
+\begin{aligned}
+N_{\mathrm{nominal},T}&=\sum_i \mathbf{1}[d_{i,T}\gt 0], \\[2pt]
+N_{\mathrm{effective},T}&=\sum_i \mathbf{1}[d_{i,T}\gt 0]\,\mathbf{1}[s_i\lt T].
+\end{aligned}
+```
 
 The protected share printed above each pair of bars is $100(1-N_{\mathrm{effective},T}/N_{\mathrm{nominal},T})$.
 

@@ -35,12 +35,9 @@ The analysis reuses the charging-station rows of the Figure 2 depth table and th
 4. **Find the two nearest distinct sites.** Multi-source Dijkstra gives the nearest site at every retained vertex, up to a graph search distance of 60 km. To find the second site, partition site ranks by each binary digit and search the half that excludes the nearest site. The minimum across those searches gives the nearest *different* physical site. This second result screens for the possibility of backup supply in step 07.
 5. **Read the distances at each charger.** The service distance to candidate site $s$ is
 
-$$
-d_{\mathrm{net}}(i,s)
-= d_{\mathrm{att},i}
-+ d_{\mathrm{line}}(v_i,v_s)
-+ d_{\mathrm{att},s}.
-$$
+```math
+d_{\mathrm{net}}(i,s) = d_{\mathrm{att},i} + d_{\mathrm{line}}(v_i,v_s) + d_{\mathrm{att},s}.
+```
 
 Here $d_{\mathrm{att},i}$ is the great-circle distance from charger $i$ to its attachment vertex $v_i$. The middle term is the shortest line path from $v_i$ to the site’s canonical vertex $v_s$. The last term is the geometric connector from $v_s$ to the site. The 60 km graph search produces candidate labels. Step 07 applies the 10 km service limit to the full three-term distance. [Network assignment script](../../analysis/fig4_grid_cascade/06_network_feeders.py)
 
@@ -60,39 +57,41 @@ Here $d_{\mathrm{att},i}$ is the great-circle distance from charger $i$ to its a
 
 **Convert depth to failure probability.** At each return period, take the maximum depth $d_s$ among a site's member records. Let $\Phi$ denote the standard normal cumulative distribution. The probability that site $s$ fails is
 
-$$
+```math
 p_s =
 \begin{cases}
-0, & d_s=0,\\
+0, & d_s=0,\\[2pt]
 \Phi\!\left(\dfrac{\ln(d_s/\theta_s)}{\beta}\right), & d_s>0 .
 \end{cases}
-$$
+```
 
 The median failure depth $\theta_s$ is 2.0 m for major sites and 0.5 m for all other sites. The default log-depth dispersion $\beta$ is 0.6. The deterministic scenario uses $d_s\geq\theta_s$ as its failure threshold.
 
 **Count direct and primary-feeder outages.** Let $I_i=1$ when the charger itself has positive flood depth and $I_i=0$ otherwise. Let $p_1$ be its primary feeder’s failure probability, taking $p_1=0$ for an unassigned charger. Direct inundation counts once, including when the feeder also fails.
 
-$$
-P_i^{\mathrm{primary}} = I_i+(1-I_i)p_1,\qquad
-N_{\mathrm{direct}}=\sum_i I_i,\qquad
-A=\frac{\sum_i P_i^{\mathrm{offline}}}{N_{\mathrm{direct}}}.
-$$
+```math
+\begin{aligned}
+P_i^{\mathrm{primary}} &= I_i+(1-I_i)p_1, \\[2pt]
+N_{\mathrm{direct}}&=\sum_i I_i, \\[2pt]
+A&=\frac{\sum_i P_i^{\mathrm{offline}}}{N_{\mathrm{direct}}}.
+\end{aligned}
+```
 
 **Search for backup supply after primary failure.**
 
 1. For a dry charger with a network primary, check whether any second distinct site could be reached within 10 km on the intact network. Removing connections can only eliminate paths or lengthen them. A charger that fails this screen retains its primary-only loss. The straight-line fallback supplies no network route for a backup search.
 2. Isolate the primary site's canonical vertex and all its incident edges. Another site attached to that same vertex also loses access through it. If the charger's starting vertex is isolated, rerouting fails there.
-3. From the charger's attachment vertex, search the residual graph for the **nearest reachable different site of the same OSM class**. All five classes in the table above are distinguished. The remaining search budget is $10\,000-d_{\mathrm{att},i}$ metres and includes the alternate site's connector. A nearer site of another class can therefore be passed over.
+3. From the charger's attachment vertex, search the residual graph for the **nearest reachable different site of the same OSM class**. All five classes in the table above are distinguished. The remaining search budget is $`10\,000-d_{\mathrm{att},i}`$ metres and includes the alternate site's connector. A nearer site of another class can therefore be passed over.
 4. If an alternate is reachable, read its own failure probability $p_b$ at this return period. The model treats the two site failures as independent. Under the counterfactual the offline probability is
 
-$$
+```math
 P_i^{\mathrm{backup}} =
 \begin{cases}
-1, & I_i=1,\\
-p_1p_b, & I_i=0 \text{ and a compatible alternate is reachable},\\
+1, & I_i=1,\\[2pt]
+p_1p_b, & I_i=0 \text{ and a compatible alternate is reachable},\\[2pt]
 p_1, & I_i=0 \text{ and no compatible alternate is reachable}.
 \end{cases}
-$$
+```
 
 At RP100, the primary-only model adds **26,878** expected outages above direct flooding ($A=1.188$). With backup supply, the increment is **18,867** ($A=1.132$). These are expectations summed over chargers. The residual search models the loss of one primary site at a time. Step 08 addresses simultaneous failures and the loss of connections to upstream supply. [Cascade script](../../analysis/fig4_grid_cascade/07_probabilistic_cascade.py) · [Routing implementation](../../analysis/fig4_grid_cascade/_joint_failure_routing.py)
 
@@ -111,16 +110,18 @@ A charger can stay dry, retain its primary feeder and still lose upstream supply
 3. Resolve each charger's primary feeder with the same 10 km network and 8 km fallback rules. Record direct inundation $I_i$ and deterministic failure of the assigned primary $F_i$. Set $F_i=0$ if there is no assigned feeder.
 4. Evaluate energisation at **the charger's own attachment vertex**. Let $L_i^{\mathrm{pre}}$ and $L_i^{\mathrm{post}}$ indicate whether its component has a source before and after isolation. A charger with no network attachment cannot contribute an extra islanding loss. For an attached charger,
 
-$$
+```math
 J_i=(1-I_i)(1-F_i)L_i^{\mathrm{pre}}(1-L_i^{\mathrm{post}}).
-$$
+```
 
 5. Sum the deterministic service losses $N_{\mathrm{service}}=\sum_i \max(I_i,F_i)$, then add the newly islanded chargers. The same calculation is made for each country.
 
-$$
-N_{\mathrm{conn}}=N_{\mathrm{service}}+\sum_i J_i,\qquad
-\Delta A=\frac{N_{\mathrm{conn}}-N_{\mathrm{service}}}{N_{\mathrm{direct}}}.
-$$
+```math
+\begin{aligned}
+N_{\mathrm{conn}}&=N_{\mathrm{service}}+\sum_i J_i, \\[2pt]
+\Delta A&=\frac{N_{\mathrm{conn}}-N_{\mathrm{service}}}{N_{\mathrm{direct}}}.
+\end{aligned}
+```
 
 | Step 08 inputs | Outputs and RP100 checks |
 |:--|:--|

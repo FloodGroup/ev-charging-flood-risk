@@ -16,10 +16,12 @@ How sensitive are charging outages to the substation failure rule, the availabil
 
 **Output.** Three scenario estimates. The line on the primary-feeder estimate shows parameter sensitivity. Vary dispersion $\beta$ to 0.4 or 0.8 at the default median depths, or multiply both median depths by 0.75 (softer) or 1.5 (harder) at the default dispersion. The plotted bounds are
 
-$$
-A_{\min}=\min(A_{\mathrm{hard}},A_{\beta=0.4},A_{\beta=0.8}),\qquad
-A_{\max}=\max(A_{\mathrm{soft}},A_{\beta=0.4},A_{\beta=0.8}).
-$$
+```math
+\begin{aligned}
+A_{\min}&=\min(A_{\mathrm{hard}},A_{\beta=0.4},A_{\beta=0.8}), \\[2pt]
+A_{\max}&=\max(A_{\mathrm{soft}},A_{\beta=0.4},A_{\beta=0.8}).
+\end{aligned}
+```
 
 The RP100 range is **1.151–1.212**. Its endpoints are sensitivity runs. [Failure probabilities and residual-network search](../Figure4/README.md#step-07--fragility-and-backup-supply)
 
@@ -33,10 +35,10 @@ The RP100 range is **1.151–1.212**. Its endpoints are sensitivity runs. [Failu
 
 **Output.** The two points per country give the deterministic feeder-only and feeder-plus-islanding amplification. The annotation uses the full global inventory. Globally the outage count rises from **170,758** to **186,132**. Both are deterministic counts.
 
-$$
+```math
 \Delta A=\frac{N_{\mathrm{conn}}-N_{\mathrm{service}}}{N_{\mathrm{direct}}}
 =\frac{15{,}374}{143{,}264}=0.1073 .
-$$
+```
 
 The source-connectivity test and its graph inputs are documented in [Figure 4, step 08](../Figure4/README.md#step-08--islanding).
 
@@ -44,9 +46,9 @@ The source-connectivity test and its graph inputs are documented in [Figure 4, s
 
 **Input.** The [Figure 4 urban-centre table](../Figure4/data/cascade_metro_named.csv) supplies the directly flooded count (`direct`), expected primary-only losses (`total`) and their ratio (`A_total`) for each centre.
 
-$$
+```math
 A_{\mathrm{city}}=\frac{E_{\mathrm{offline,city}}}{N_{\mathrm{direct,city}}}.
-$$
+```
 
 **Output.** Retain centres with at least 50 directly flooded chargers and a defined ratio. Across **251** centres, the unweighted median is **1.1005** and the 95th percentile is **1.5473**. For display, values above 2.6 are placed at 2.6 and the histogram uses 0.05-wide bins. The two percentile lines are calculated from the original ratios before clipping. Figure 4e uses a separate inclusion rule for its map.
 

@@ -27,7 +27,7 @@ Steps 01 and 02 write their local intermediate tables to `analysis/stage0_statio
 
 For country $c$, the charging-to-fuel ratio is $N^{\mathrm{charging}}_c/N^{\mathrm{fuel}}_c$. The worldwide value is $947{,}602/1{,}344{,}301=0.70$ to two decimal places. The map extent contains 1,344,300 fuel sites. The inventory total includes the remaining site.
 
-The IEA cross-audit uses a different denominator, $\mathrm{points\ per\ station}_c=P^{\mathrm{IEA}}_{c,2025}/N^{\mathrm{charging}}_c$. A mapped station may host several charging points. This comparison is plotted in [Supplementary Figure 1a](../Supplementary_Figure1/README.md).
+The IEA cross-audit uses a different denominator, $`\mathrm{points\ per\ station}_c=P^{\mathrm{IEA}}_{c,2025}/N^{\mathrm{charging}}_c`$. A mapped station may host several charging points. This comparison is plotted in [Supplementary Figure 1a](../Supplementary_Figure1/README.md).
 
 ## Panels and figure data
 

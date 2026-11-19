@@ -28,19 +28,23 @@ Figure 2 compares floodplain shares of charging and fuel stations. The fuel netw
 
 For network $j$, let $n_j$ be the number of stations and $p_j$ the share with positive sampled depth. The global ratio is $R=p_c/p_f$, where $c$ denotes charging and $f$ denotes fuel. The 95% interval uses
 
-$$
-\mathrm{SE}(\log R)=\sqrt{\frac{1-p_c}{n_c p_c}+\frac{1-p_f}{n_f p_f}},
-\qquad \mathrm{CI}_{95}=R\exp\!\left(\pm1.96\,\mathrm{SE}(\log R)\right).
-$$
+```math
+\begin{aligned}
+\mathrm{SE}(\log R)&=\sqrt{\frac{1-p_c}{n_c p_c}+\frac{1-p_f}{n_f p_f}}, \\[2pt]
+\mathrm{CI}_{95}&=R\exp\!\left(\pm1.96\,\mathrm{SE}(\log R)\right).
+\end{aligned}
+```
 
 At RP100 the shares are 15.12% and 12.47%, giving $R=1.213$. For the threshold inset, the zero-threshold row requires depth **above** zero. Positive thresholds of 0.15, 0.30, 0.50, 0.75, 1.00 and 1.50 m include depths **at or above** the threshold. The urban comparison gives each eligible centre one ratio. Its median is 0.98 across 474 centres.
 
 For the Kitagawa decomposition, retain country strata represented in both networks. Let $w_{jc}$ be country $c$’s share of network $j$ in this matched sample and $p_{jc}$ its floodplain share. With rates expressed as fractions, the two terms are
 
-$$
-\mathrm{composition}=\sum_c(w_{\mathrm{EV},c}-w_{\mathrm{fuel},c})\frac{p_{\mathrm{EV},c}+p_{\mathrm{fuel},c}}{2},\qquad
-\mathrm{siting}=\sum_c(p_{\mathrm{EV},c}-p_{\mathrm{fuel},c})\frac{w_{\mathrm{EV},c}+w_{\mathrm{fuel},c}}{2}.
-$$
+```math
+\begin{aligned}
+\mathrm{composition}&=\sum_c(w_{\mathrm{EV},c}-w_{\mathrm{fuel},c})\frac{p_{\mathrm{EV},c}+p_{\mathrm{fuel},c}}{2}, \\[2pt]
+\mathrm{siting}&=\sum_c(p_{\mathrm{EV},c}-p_{\mathrm{fuel},c})\frac{w_{\mathrm{EV},c}+w_{\mathrm{fuel},c}}{2}.
+\end{aligned}
+```
 
 In percentage points the matched-country gap is $3.07-0.43=2.64$. The global ratio above uses the full inventories.
 

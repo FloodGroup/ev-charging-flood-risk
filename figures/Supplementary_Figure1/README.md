@@ -10,10 +10,10 @@ Three diagnostics support the main analysis. They examine inventory coverage, co
 
 **Calculation and output.** Divide each country's IEA points by its mapped station sites. Store the numerator, denominator and ratio in the [six-market cross-audit](data/crosscheck_stations_vs_iea.csv). The plotting script orders the six markets by ratio. China has about 16.4 points per mapped station and Japan about 1.2. A site may host several points, so the ratio reflects station configuration as well as inventory coverage.
 
-$$
+```math
 \mathrm{points\ per\ mapped\ station}_c
 =\frac{P^{\mathrm{IEA}}_{c,2025}}{N^{\mathrm{charging}}_c}.
-$$
+```
 
 ## Panel b · OCM coverage gates
 
