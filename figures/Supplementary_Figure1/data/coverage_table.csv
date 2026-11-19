@@ -1,0 +1,123 @@
+country,n,max_year_share,peak_year,spread_years,coverage_vs_merged,qa_pass
+United States of America,86342,0.352,2025,10,1.368,True
+United Kingdom,27157,0.495,2023,11,0.58,True
+Germany,24332,0.456,2021,8,0.339,True
+Spain,17648,0.382,2022,9,1.08,True
+Canada,17377,0.37,2025,9,1.283,True
+France,14765,0.412,2020,10,0.307,True
+Italy,9995,0.209,2019,12,0.333,True
+Netherlands,8116,0.656,2015,4,0.081,False
+Sweden,4953,0.442,2023,11,0.436,True
+Norway,4792,0.421,2023,11,0.838,True
+Portugal,3600,0.302,2023,11,0.507,True
+Denmark,2178,0.655,2024,6,0.146,False
+Russia,2121,0.618,2023,5,1.027,False
+Ireland,2079,0.36,2024,12,1.123,True
+Finland,1879,0.566,2023,9,0.377,False
+Turkey,1723,0.326,2025,7,0.163,True
+Austria,1315,0.294,2017,8,0.098,True
+Belgium,1243,0.112,2015,14,0.034,True
+Australia,1239,0.245,2023,8,0.263,True
+India,1227,0.813,2025,2,0.035,False
+New Zealand,943,0.353,2017,5,0.912,False
+Iceland,930,0.591,2023,4,1.025,False
+Lithuania,930,0.699,2025,2,0.484,False
+Switzerland,897,0.265,2017,7,0.112,False
+Hungary,860,0.262,2018,8,0.414,False
+Brazil,849,0.524,2025,4,0.104,False
+Japan,784,0.796,2013,3,0.024,False
+Romania,654,0.393,2025,6,0.169,False
+Malaysia,641,0.63,2025,5,0.532,False
+Czechia,628,0.204,2015,7,0.223,False
+Mexico,584,0.616,2017,3,0.297,False
+Ukraine,568,0.322,2024,4,0.129,False
+Poland,473,0.294,2019,7,0.066,False
+Egypt,464,0.791,2024,2,2.158,False
+Indonesia,439,0.449,2024,3,0.273,False
+South Africa,382,0.649,2025,4,0.781,False
+Dominican Republic,373,0.78,2022,2,,False
+Israel,350,0.303,2021,4,0.121,False
+Greece,285,0.221,2021,4,0.068,False
+Croatia,267,0.258,2019,3,0.236,False
+Slovakia,248,0.226,2019,2,0.169,False
+Hong Kong S.A.R.,216,0.449,2011,2,,False
+Slovenia,205,0.302,2017,2,0.152,False
+Philippines,204,0.956,2025,1,1.207,False
+Azerbaijan,190,0.995,2025,1,2.159,False
+Chile,182,0.599,2021,2,0.233,False
+Costa Rica,173,0.405,2019,2,0.678,False
+Estonia,171,0.848,2014,1,0.189,False
+South Korea,161,1.0,2024,1,0.161,False
+Morocco,155,0.316,2025,1,1.476,False
+Uruguay,146,0.411,2025,2,0.745,False
+United Arab Emirates,136,0.346,2018,2,0.142,False
+Serbia,110,0.673,2023,1,0.426,False
+Taiwan,109,0.963,2024,1,0.013,False
+Andorra,96,0.438,2023,2,1.959,False
+Jordan,92,0.38,2021,1,0.231,False
+Luxembourg,91,0.242,2015,0,0.087,False
+Cyprus,91,0.352,2023,1,0.351,False
+Latvia,90,0.789,2018,1,0.115,False
+Colombia,74,0.392,2025,0,0.344,False
+Bulgaria,61,0.262,2014,0,0.034,False
+Sri Lanka,61,0.934,2023,1,0.248,False
+Isle Of Man,58,0.345,2022,0,,False
+Malta,56,0.929,2015,1,0.659,False
+Argentina,47,0.596,2025,0,0.118,False
+Paraguay,45,0.533,2023,0,0.918,False
+Bosnia And Herzegovina,41,0.366,2021,0,,False
+Belarus,40,0.4,2023,0,0.078,False
+Monaco,36,1.0,2012,1,0.818,False
+Moldova; Republic Of,35,0.714,2022,0,,False
+Jamaica,35,0.914,2023,1,0.921,False
+Montenegro,32,0.594,2023,0,0.323,False
+Jersey,29,0.345,2024,0,0.362,False
+Georgia,28,0.464,2025,0,0.101,False
+Tunisia,27,0.37,2025,0,0.429,False
+Thailand,27,0.926,2021,0,0.006,False
+San Marino,24,0.708,2018,0,1.263,False
+Ecuador,23,0.522,2025,0,0.139,False
+Oman,22,1.0,2025,0,0.262,False
+Cambodia,19,0.737,2024,0,0.109,False
+Kosovo,16,0.562,2024,0,0.941,False
+Guernsey,15,0.6,2023,0,0.682,False
+Albania,14,0.643,2025,0,0.065,False
+Macedonia,12,0.417,2019,0,,False
+Kenya,12,0.583,2021,0,0.122,False
+Liechtenstein,12,0.417,2025,0,0.188,False
+Panama,10,0.7,2025,0,0.167,False
+China,10,0.5,2013,0,0.0,False
+Singapore,10,0.8,2017,0,0.004,False
+Iran; Islamic Republic Of,9,1.0,2025,0,,False
+Reunion,7,0.571,2023,0,,False
+Peru,7,0.571,2024,0,0.226,False
+Gibraltar,7,0.429,2023,0,1.75,False
+Armenia,6,0.5,2025,0,0.059,False
+Viet Nam,5,0.4,2025,0,,False
+Faroe Islands,5,0.8,2017,0,,False
+Saudi Arabia,4,0.75,2025,0,0.012,False
+Puerto Rico,4,0.75,2015,0,0.03,False
+Qatar,4,0.75,2023,0,0.032,False
+Aland Islands,3,0.667,2018,0,,False
+Trinidad And Tobago,3,1.0,2022,0,,False
+Guatemala,3,0.667,2025,0,0.077,False
+Ghana,3,1.0,2021,0,0.115,False
+Kazakhstan,3,0.667,2019,0,0.037,False
+Iraq,2,0.5,2025,0,0.03,False
+Rwanda,2,1.0,2021,0,0.031,False
+Pakistan,2,0.5,2022,0,0.013,False
+Macao,2,0.5,2019,0,0.048,False
+Nepal,2,1.0,2025,0,0.003,False
+Barbados,1,1.0,2013,0,,False
+Bahrain,1,1.0,2025,0,0.053,False
+Afghanistan,1,1.0,2015,0,0.5,False
+Botswana,1,1.0,2022,0,,False
+Myanmar,1,1.0,2024,0,0.01,False
+Namibia,1,1.0,2021,0,1.0,False
+Palestinian Territory; Occupied,1,1.0,2022,0,,False
+Kyrgyzstan,1,1.0,2023,0,0.04,False
+Saint Lucia,1,1.0,2019,0,,False
+Svalbard And Jan Mayen,1,1.0,2017,0,,False
+Swaziland,1,1.0,2024,0,,False
+Uganda,1,1.0,2017,0,0.024,False
+Uzbekistan,1,1.0,2025,0,0.003,False

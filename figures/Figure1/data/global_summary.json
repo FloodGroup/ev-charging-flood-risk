@@ -1,0 +1,17 @@
+{
+ "n_ev": 947602,
+ "n_ev_gp": 662962,
+ "n_ev_amap": 284640,
+ "n_gas": 1344301,
+ "ev_status_known": 662962,
+ "ev_open": 658089,
+ "ev_temp_closed": 4872,
+ "gas_open": 1320432,
+ "gas_temp_closed": 23869,
+ "pw_known": 511074,
+ "ev_closed_pct": 0.73,
+ "gas_closed_pct": 1.78,
+ "fast_share_global": 28.3,
+ "pw_coverage_pct": 53.9,
+ "n_countries_ev": 167
+}

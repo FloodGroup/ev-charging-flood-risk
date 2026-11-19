@@ -1,0 +1,15 @@
+{
+ "n_countries": 15,
+ "n_stations": 218560,
+ "slope_median": -0.09337109167280584,
+ "pos_sig": 1,
+ "neg_sig": 2,
+ "fe_pos_sig": 2,
+ "fe_neg_sig": 2,
+ "fe_slope_median": -0.027374325914441302,
+ "n_metros": 80,
+ "metro_pos_sig": 2,
+ "metro_neg_sig": 4,
+ "metro_slope_median": 0.0,
+ "newest_below_gas": 7
+}

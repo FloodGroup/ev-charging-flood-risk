@@ -1,0 +1,128 @@
+{
+ "qa": {
+  "ev_n": 947602,
+  "gas_n": 1344301,
+  "ev_exp": 143264,
+  "gas_exp": 167605,
+  "ev_pct": 15.12,
+  "gas_pct": 12.47,
+  "ratio": 1.213
+ },
+ "income_ratio_gradient": {
+  "HIC": 1.39,
+  "UMC": 1.48,
+  "LMC": 0.69,
+  "LIC": 0.25
+ },
+ "ev_pct_by_income": {
+  "HIC": 10.4,
+  "UMC": 24.2,
+  "LMC": 10.3,
+  "LIC": 1.2
+ },
+ "share_exposed_HIC_UMC": 97.3,
+ "share_pop_HIC_UMC": 55.1,
+ "conc_indices": {
+  "ev_stock": 0.656,
+  "ev_exposed": 0.584,
+  "ev_effective": 0.456,
+  "gas_stock": 0.348,
+  "gas_exposed": 0.262,
+  "gas_effective": 0.203
+ },
+ "protection": {
+  "global_nominal": 143264,
+  "global_effective": 79908,
+  "global_pct_protected": 44.2,
+  "share_effective_by_income": {
+   "HIC": 11.2,
+   "UMC": 88.4,
+   "LMC": 0.4,
+   "LIC": 0.0
+  },
+  "share_nominal_by_income": {
+   "HIC": 42.4,
+   "UMC": 54.9,
+   "LMC": 2.7,
+   "LIC": 0.0
+  },
+  "CHN": {
+   "nominal": 73506,
+   "effective": 65876
+  },
+  "NLD": {
+   "nominal": 25058,
+   "effective": 0
+  }
+ },
+ "inheritance": {
+  "spearman_maturity_vs_gasexp": 0.139,
+  "p": 0.18007957192040852,
+  "bins": {
+   "1": {
+    "gas_pct_w": 12.15,
+    "gas_eff_pct_w": 10.41,
+    "eff_share_of_exposed": 85.67,
+    "ev_per_gas_max": 0.04,
+    "n_countries": 35.0,
+    "prot_median": 8.27,
+    "pop_m": 2260.37
+   },
+   "2": {
+    "gas_pct_w": 12.51,
+    "gas_eff_pct_w": 12.03,
+    "eff_share_of_exposed": 96.18,
+    "ev_per_gas_max": 0.24,
+    "n_countries": 20.0,
+    "prot_median": 17.67,
+    "pop_m": 985.38
+   },
+   "3": {
+    "gas_pct_w": 10.26,
+    "gas_eff_pct_w": 0.78,
+    "eff_share_of_exposed": 7.65,
+    "ev_per_gas_max": 0.3,
+    "n_countries": 4.0,
+    "prot_median": 34.28,
+    "pop_m": 1581.12
+   },
+   "4": {
+    "gas_pct_w": 7.58,
+    "gas_eff_pct_w": 1.46,
+    "eff_share_of_exposed": 19.27,
+    "ev_per_gas_max": 1.26,
+    "n_countries": 20.0,
+    "prot_median": 57.18,
+    "pop_m": 844.69
+   },
+   "5": {
+    "gas_pct_w": 20.6,
+    "gas_eff_pct_w": 17.15,
+    "eff_share_of_exposed": 83.24,
+    "ev_per_gas_max": 17.68,
+    "n_countries": 16.0,
+    "prot_median": 76.86,
+    "pop_m": 1751.61
+   }
+  }
+ },
+ "pretransition_zone": {
+  "n_countries": 45,
+  "pop_b": 2.99,
+  "gas_pct_w": 9.9,
+  "gas_eff_pct_w": 8.8,
+  "prot_median": 9.5
+ },
+ "quintile_pooled": {
+  "ev_q1": 13.67,
+  "ev_q2": 13.71,
+  "ev_q3": 13.64,
+  "ev_q4": 14.45,
+  "ev_q5": 21.75,
+  "gas_q1": 11.81,
+  "gas_q2": 12.31,
+  "gas_q3": 11.89,
+  "gas_q4": 11.93,
+  "gas_q5": 15.87
+ }
+}

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article below."
+title: "Code for: Grid dependence amplifies flood impacts on the global electric vehicle charging network"
+type: software
+authors:
+  - family-names: Long
+    given-names: Zhi-Yong
+  - family-names: Yang
+    given-names: Rui-Yi
+  - family-names: Jiang
+    given-names: Long
+  - family-names: Chang
+    given-names: Lu
+  - family-names: Duan
+    given-names: Huan-Feng
+license: MIT
+preferred-citation:
+  type: article
+  title: "Grid dependence amplifies flood impacts on the global electric vehicle charging network"
+  authors:
+    - family-names: Long
+      given-names: Zhi-Yong
+    - family-names: Yang
+      given-names: Rui-Yi
+    - family-names: Jiang
+      given-names: Long
+    - family-names: Chang
+      given-names: Lu
+    - family-names: Duan
+      given-names: Huan-Feng
+  year: 2026
+  status: submitted

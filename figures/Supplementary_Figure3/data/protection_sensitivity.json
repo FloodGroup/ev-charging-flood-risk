@@ -1,0 +1,25 @@
+{
+ "RP50": {
+  "nominal": 131899,
+  "effective": 63543,
+  "pct_protected": 51.8
+ },
+ "RP100": {
+  "nominal": 143264,
+  "effective": 79908,
+  "pct_protected": 44.2
+ },
+ "RP200": {
+  "nominal": 154014,
+  "effective": 104224,
+  "pct_protected": 32.3
+ },
+ "RP500": {
+  "nominal": 167089,
+  "effective": 126177,
+  "pct_protected": 24.5
+ },
+ "zero_as_missing": {
+  "effective": 79770
+ }
+}
