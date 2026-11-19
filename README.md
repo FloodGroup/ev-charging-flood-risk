@@ -75,10 +75,28 @@ The [path settings](shared/paths.py) locate data on the researcher’s computer.
 
 ### From station records to figure data
 
-1. [Station database](analysis/stage0_station_database/) converts AMap coordinates and combines the charging inventories by geographical coverage. The fuel network provides the reference for [direct flood exposure](analysis/fig2_flood_exposure/).
-2. The [cohort analysis](analysis/fig3_opening_year_cohorts/), [grid simulation](analysis/fig4_grid_cascade/) and [protection adjustment](analysis/fig5_inequality_protection/) link local inputs to flood depths and city assignments. [Global infrastructure statistics](analysis/fig1_global_infrastructure/) provide network totals and the IEA cross-check.
-3. [Supplementary tables](analysis/si_tables/) assemble Tables 2–8. The [grid aggregation script](analysis/reanalysis_products/01_build_station_density_grid.py) creates the 0.25° reanalysis table from local records. The [figure-data exporter](export_figure_source_data.py) copies or aggregates the fields needed for plotting.
-4. [Independent tile resampling](analysis/fig2_flood_exposure/resample_public_jrc_tiles.py) checks the mosaicked hazard values against JRC tiles using a locally held station table. The [topology test](analysis/fig4_grid_cascade/13_test_site_failure_topology.py) runs on synthetic networks with `python analysis/fig4_grid_cascade/13_test_site_failure_topology.py`.
+**To redraw the figures**, run `python run_all.py figures`. The plotting scripts read the prepared files under `figures/`. For example, each row of the [Figure 1 charging-density table](figures/Figure1/data/hexbin_charging_stations.csv) represents one map hexagon. The columns `x` and `y` locate its centre, and `stations` gives the number of charging sites inside it. Panel 1a colours the hexagon by that count. The individual site coordinates stay local.
+
+**To rebuild those files**, run `python run_all.py full` with the [source datasets](DATA_SOURCES.md) available locally. The [station database scripts](analysis/stage0_station_database/) first assemble two inventories. The charging inventory uses AMap in mainland China and Google Places elsewhere. The fuel inventory uses Google Places. Both record one row per site.
+
+| Analysis | Inputs used locally | What the analysis produces for the figure |
+|:--|:--|:--|
+| [Figure 1 · Station distribution](analysis/fig1_global_infrastructure/) | Charging and fuel inventories, IEA charging-point series | Station counts per hexagon and per country, plus a worldwide trend in the number of charging points. |
+| [Figure 2 · Direct flooding](analysis/fig2_flood_exposure/) | Both inventories, river-flood depth maps and urban-centre boundaries | Flood depth at each site for seven return periods. These local depths supply the exposure shares plotted for each network, country and city. |
+| [Figure 3 · Registration years](analysis/fig3_opening_year_cohorts/) | A separate registry with station registration years, flood maps and Figure 2 benchmarks | Floodplain shares by registration period and trends by country and city. The two city maps also use local extracts of dated stations. |
+| [Figure 4 · Power outages](analysis/fig4_grid_cascade/) | Charging-site depths from Figure 2, substation flood depths and the power network | Estimates of how many chargers lose service through direct flooding or feeder failure, and how those totals change with backup supply. The four city maps use local feeder extracts. |
+| [Figure 5 · Flood protection](analysis/fig5_inequality_protection/) | Site depths from Figure 2, local protection standards, income groups, GDP and population | Counts of exposed chargers before and after accounting for protection, plus summaries by country and income group. |
+
+The full run calls the [figure-data exporter](export_figure_source_data.py) automatically. It places the plotting tables in each figure’s `data/` folder. The city extracts and map backgrounds needed for Figures 3 and 4 stay in their respective `data/private/` folders.
+
+<details>
+<summary>Supplementary outputs and checks</summary>
+
+- [Supplementary Figure 1](figures/Supplementary_Figure1/README.md) checks the charging inventory against IEA totals, the coverage of the dated registry, and charger-to-grid distances. [Supplementary Figure 2](figures/Supplementary_Figure2/README.md) uses the Figure 4 outage estimates and islanding test. [Supplementary Figure 3](figures/Supplementary_Figure3/README.md) uses the Figure 5 protection results at four return periods.
+- The full analysis also produces [Supplementary Tables 2–8](analysis/si_tables/) and a [0.25° grid of station counts, exposure and outages](analysis/reanalysis_products/01_build_station_density_grid.py).
+- The [tile-resampling check](analysis/fig2_flood_exposure/resample_public_jrc_tiles.py) compares flood exposure calculated from the original JRC tiles with the Figure 2 results. The [network topology test](analysis/fig4_grid_cascade/13_test_site_failure_topology.py) checks feeder failure and rerouting on synthetic networks.
+
+</details>
 
 ## Licence and citation
 
