@@ -33,7 +33,7 @@ python run_all.py figures
 This mode reads the prepared figure tables directly. Each plotting script writes PNG, PDF, SVG and PDF-compatible Illustrator files beside the script. The runner records completed and skipped figures in `run_logs/`.
 
 > [!NOTE]
-> The public tables are sufficient for Figures 1, 2 and 5 and Supplementary Figures 1–3. Figures 3 and 4 also require local station-level map extracts. The runner skips those two composites until the required files are present. Supplementary Figure 4 is supplied as a static schematic.
+> The public tables are sufficient for Figures 1, 2 and 5 and Supplementary Figures 1–3. The [Figure 3](figures/Figure3/README.md) and [Figure 4](figures/Figure4/README.md) guides show the complete figures. Redrawing them also requires local station-level map extracts. The runner skips those two composites until the required files are present. Supplementary Figure 4 is supplied as a static schematic.
 
 ### Reproduce the full analysis from local data
 

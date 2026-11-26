@@ -13,6 +13,6 @@ The analysis reads Google Places and AMap inventories supplied by the researcher
 
 1. Configure the named paths in [Data sources](DATA_SOURCES.md). With the required inputs, use `python run_all.py full` to build the station database, analyses and local maps.
 2. If analysis outputs already exist, run `python export_figure_source_data.py figures` to prepare the aggregate plotting tables. To draw city panels locally, use `python export_figure_source_data.py figures --local-maps` and `python analysis/map_backgrounds/01_build_map_backgrounds.py figures` before running the plot scripts.
-3. Licensed city extracts and terrain or street layers are read from `figures/Figure3/data/private/` and `figures/Figure4/data/private/`. These directories and locally rendered point maps are excluded from Git. Aggregate country and urban-centre tables remain in the figure’s `data/` folder.
+3. Licensed city extracts and terrain or street layers are read from `figures/Figure3/data/private/` and `figures/Figure4/data/private/`. The figure guides include the complete figures as raster previews from the manuscript. The private directories and locally generated map outputs are excluded from Git. Aggregate country and urban-centre tables remain in the figure’s `data/` folder.
 
 The 0.25° density and exposure table is a separate reanalysis product. Its generation code is provided here. Each row reports counts or expected outages for a cell. The coordinates in this product mark grid cells.

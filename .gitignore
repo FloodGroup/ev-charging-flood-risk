@@ -45,6 +45,8 @@ Thumbs.db
 *.pptx
 
 # Public aggregate tables, reference boundaries and approved illustrations.
+!/figures/Figure3/Figure3-preview.png
+!/figures/Figure4/Figure4-preview.png
 !/figures/Figure3/cohort-trends.png
 !/figures/Figure2/flood_exposure_method.png
 !/figures/Figure4/grid-amplification.png

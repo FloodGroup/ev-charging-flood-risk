@@ -2,7 +2,7 @@
 
 Figure 3 asks whether newer public chargers are drifting into or out of the 100-year river floodplain. Opening year is proxied by the Open Charge Map (OCM) registration year. Bulk imports can mix station ages within a calendar year, so the analysis applies country coverage gates before estimating trends. Fifteen countries with 218,560 dated stations pass the gates.
 
-<img src="cohort-trends.png" alt="National and within-city registration-cohort trends" width="480">
+![Figure 3. Registration cohorts, national and city trends, and floodplain maps for Paris and Málaga](Figure3-preview.png)
 
 ## Archive ingest, flood sampling and urban centres
 
@@ -39,6 +39,8 @@ The city maps distinguish early (through 2018) and late (2022–25) cohorts. Par
 | c | Distribution of trends across 80 urban centres | [City estimates](data/metro_slopes.csv) |
 | d | Exposure of the 2024–25 cohort versus the national fuel benchmark | [Country estimates](data/country_slopes.csv) |
 | e, f | Early (through 2018) and late (2022–25) cohorts over the Paris and Málaga floodplains | Local registration extracts, RP100 mask, terrain and street layers |
+
+<img src="cohort-trends.png" alt="National and within-city registration-cohort trends" width="480">
 
 ## Reproduce
 

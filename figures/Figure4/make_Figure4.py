@@ -509,7 +509,7 @@ def legend_strip(ax):
     COLS = {
         0.015: [
             ("sq", FAIL_C, 26, None, "failed feeder site (P≥0.5)"),
-            ("sqo", RESC_C, 26, None, "backup feeder site, dry"),
+            ("sqo", RESC_C, 26, None, "backup feeder site (P<0.5)"),
             ("tri", "#3C3C3C", 24, None, "power plant"),
         ],
         0.265: [

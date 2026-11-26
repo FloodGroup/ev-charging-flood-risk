@@ -2,6 +2,8 @@
 
 A charging station can lose service while its own site stays dry if the substation that feeds it fails. At the 100-year river flood (RP100), **143,264** chargers flood directly. Including primary-feeder failure raises expected outages to **170,142**. Allowing a reachable backup feeder reduces that total to **162,131**. All three estimates use the same inventory and flood depths. [Global scenario table](data/cascade_rp_curve.csv)
 
+![Figure 4. Four city feeder maps, urban and national outage amplification, and estimated grid-added losses](Figure4-preview.png)
+
 [Assets and grid](#assets-and-grid) · [Feeder assignment](#step-06--physical-sites-and-feeder-assignment) · [Failure and backup](#step-07--fragility-and-backup-supply) · [Islanding](#step-08--islanding) · [Panels](#panels-and-figure-data) · [Running the analysis](#reproduce)
 
 ## Assets and grid
@@ -141,7 +143,7 @@ N_{\mathrm{conn}}&=N_{\mathrm{service}}+\sum_i J_i, \\[2pt]
 
 | Panel | What is plotted | Figure inputs |
 |:--|:--|:--|
-| a–d | Düsseldorf (ID 2288, 12 km), Tainan (12703, 15.5 km), Handan (10912, 18 km) and Québec City (1048, 13 km). These are the four highest-amplification centres among those with at least 200 chargers and 20 directly flooded. The runner passes their IDs and window widths to step 09. | Local feeder extracts, terrain and background maps. The labels distinguish direct flooding, feeder loss and backup rescue. |
+| a–d | Düsseldorf (ID 2288, 12 km), Tainan (12703, 15.5 km), Handan (10912, 18 km) and Québec City (1048, 13 km). These are the four highest-amplification centres among those with at least 200 chargers and 20 directly flooded. The runner passes their IDs and window widths to step 09. | Local feeder extracts, terrain and background maps. Blue open squares mark backup feeder sites with a failure probability below 0.5. |
 | e | Urban amplification for centres with at least 100 chargers and 20 directly flooded. Each point marks the urban-centre centroid. | [City summaries](data/cascade_metro_named.csv) · [Public centroids](data/urban_centre_coordinates.csv) |
 | f | Global amplification across seven return periods, including the threshold scenario, fragility sensitivity envelope and backup counterfactual. | [Scenario curves](data/cascade_rp_curve.csv) |
 | g | National amplification versus directly flooded share for countries with at least 1,000 chargers and 100 directly flooded. The correlation uses the log of the directly flooded percentage. | [Countries](data/cascade_by_country.csv) · [Correlation](data/cascade_stats.json) |
